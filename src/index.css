@@ -1,10 +1,23 @@
+:root {
+  --primary-color: #1a1824;
+  --secondary-color: #2d2b37;
+
+  --yellow: #fcc108;
+  --red: #f44336;
+}
+
 body {
+  color:white;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body::-webkit-scrollbar {
+  width: 0
 }
 
 code {
