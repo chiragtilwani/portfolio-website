@@ -98,8 +98,8 @@ const useStyles = makeStyles({
     fontSize: "140px",
   },
   startBtn:{
-    width:'6rem',
-    height:'6rem',
+    width:'5rem',
+    height:'5rem',
     backgroundColor:'#3e3e3e',
     color:'white',
     position:'absolute',
@@ -110,12 +110,15 @@ const useStyles = makeStyles({
     alignItems: 'center',
     justifyContent: 'center',
     fontWeight:'bold',
-    fontSize:'1.5rem',
     letterSpacing:'.15rem',
     cursor:'pointer',
     boxShadow:'0 0 .5rem 0 rgba(62, 62, 62, 1)',
     '&:active':{
       boxShadow:'inset 0 0 .5rem 0 white',
+    },
+    '&:hover':{
+      opacity:'.9',
+      transitionDuration:'.5s'
     }
   }
 });

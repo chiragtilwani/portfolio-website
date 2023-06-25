@@ -1,9 +1,8 @@
 import { makeStyles } from "@mui/styles";
-import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 
 import Logo from "./Logo";
-import Resume from '../assets/ChiragTilwaniResume023.pdf'
+
 
 const useStyles = makeStyles({
   container: {
@@ -22,6 +21,7 @@ const useStyles = makeStyles({
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
+    zIndex:2
   },
   linkContainer: {
     marginRight: "1rem",
@@ -42,37 +42,29 @@ const Navbar = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.innerContainer} id="home">
+    <div className={classes.innerContainer} >
       <div className={classes.logo}>
-        <HashLink to="/#home" smooth className={classes.link}>
+        <Link to="/"  className={classes.link}>
           {" "}
           <Logo />
-        </HashLink>
+        </Link>
       </div>
       <div className={classes.linkContainer}>
-        <HashLink to="/#home" smooth className={classes.link}>
+        <Link to="/"  className={classes.link}>
           .home<span style={{ color: "var(--red)" }}>( )</span>
-        </HashLink>
-        <HashLink to="/#about" smooth className={classes.link}>
-          .about<span style={{ color: "var(--red)" }}>( )</span>
-        </HashLink>
-        <Link
-          to={Resume}
-          target="_blank"
-          className={classes.link}
-          download
-        >
-          .resume<span style={{ color: "var(--red)" }}>( )</span>
         </Link>
-        <HashLink to="/#skills" smooth className={classes.link}>
+        <Link to="/about" smooth className={classes.link}>
+          .about<span style={{ color: "var(--red)" }}>( )</span>
+        </Link>
+        <Link to="/skills" smooth className={classes.link}>
           .skills<span style={{ color: "var(--red)" }}>( )</span>
-        </HashLink>
-        <HashLink to="/#projects" smooth className={classes.link}>
+        </Link>
+        <Link to="/projects" smooth className={classes.link}>
           .projects<span style={{ color: "var(--red)" }}>( )</span>
-        </HashLink>
-        <HashLink to="/#contact" smooth className={classes.link}>
+        </Link>
+        <Link to="/contact" smooth className={classes.link}>
           .contact<span style={{ color: "var(--red)" }}>( )</span>
-        </HashLink>
+        </Link>
       </div>
     </div>
   );
